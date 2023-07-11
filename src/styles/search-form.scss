@@ -1,0 +1,90 @@
+@import "../styles/variables.scss";
+@import "./mixins.scss";
+
+.search-form {
+  background-color: $color-primary-light-1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 34rem;
+  padding: 1rem 0 2rem 0;
+  border-radius: $border-radius-md;
+
+  .search-form-text {
+    text-align: center;
+    font-size: $heading-secondary-font-size;
+    color: $color-white;
+    margin-bottom: 1rem;
+    width: 25rem;
+  }
+
+  .search-form-inputs {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 1rem;
+
+    .search-form-selectors-cities {
+      display: flex;
+      flex-direction: column;
+      row-gap: 1rem;
+
+      .inputs-label-col {
+        display: flex;
+        flex-direction: column;
+
+        select {
+          width: 23rem;
+          height: 4rem;
+          border: none;
+          border-radius: $border-radius-sm;
+          outline: none;
+          padding: 1rem;
+          color: $color-primary-light-1;
+          font-weight: 700;
+          margin-top: 0.3rem;
+          cursor: pointer;
+        }
+
+        label {
+          color: $color-primary-light-2;
+          font-size: $font-size-md;
+        }
+      }
+    }
+
+    .selector-date-col {
+      display: flex;
+      flex-direction: column;
+
+      label {
+        color: $color-primary-light-2;
+        font-size: $font-size-md;
+      }
+    }
+  }
+
+  .search-form-btn {
+    background-color: $color-primary-dark;
+    width: 17rem;
+    border: none;
+    border-radius: $border-radius-sm;
+    padding: 1rem 6rem;
+    margin-top: 2rem;
+    font-size: $default-font-size;
+    font-family: inherit;
+    font-weight: 500;
+    color: $color-white;
+    cursor: pointer;
+    transition: all 0.1s ease-in-out;
+
+    @include mobile {
+      padding: 1rem 4rem;
+      font-size: $font-size-md;
+    }
+
+    &:hover {
+      background-color: $color-hover-btn-dark;
+    }
+  }
+}

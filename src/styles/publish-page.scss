@@ -1,0 +1,20 @@
+@import "./variables.scss";
+@import "./mixins.scss";
+
+.publish-page {
+  background-color: $color-white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .bottom-line {
+    background-color: $color-primary-light-1;
+    height: 5vh;
+    width: 100%;
+    margin-top: 20rem;
+
+    // @include mobile-small {
+    //   margin-top: 10rem;
+    // }
+  }
+}
